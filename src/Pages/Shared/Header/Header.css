@@ -5,7 +5,9 @@
     background: rgb(2, 2, 43);
     padding: 25px;
     font-size: 20px;
+    display: block;
 }
 .logo{
     color: #fff;
+    margin-left: 80px;
 }

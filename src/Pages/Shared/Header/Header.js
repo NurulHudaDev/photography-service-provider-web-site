@@ -37,10 +37,11 @@ const Header = () => {
                         <Nav.Link as={Link} to='/'>Home</Nav.Link>
                         <Nav.Link as={Link} to='/services'>Services</Nav.Link>
                         <Nav.Link as={Link} to='/about'>About</Nav.Link>
+                        <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
                         {user?.uid?<Nav.Link onClick={hendelLogOut}>Log Out</Nav.Link>:<Nav.Link as={Link} to='/login'>Log In</Nav.Link>}
                     </Nav>
                 </Container>
-                <p className="logo">User: {user?.displayName}</p>
+                <h4 className="logo">User: {user?.displayName}</h4>
             </Navbar>
         </div>
     );

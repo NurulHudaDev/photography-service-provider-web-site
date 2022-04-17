@@ -1,0 +1,7 @@
+.blogs{
+    color: orange;
+}
+.text{
+    display: flex;
+    gap: 20px;
+}
