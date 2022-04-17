@@ -1,0 +1,37 @@
+.login-form{
+    width: 400px;
+    border: 1px solid orange;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.from{
+    padding: 30px;
+}
+.login input{
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.button{
+    width: 300px;
+    background-color: rgb(255, 197, 88);
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: orange;
+    border-radius: 5px;
+}
+.google-button{
+    width: 300px;
+    background-color: rgb(227, 227, 227);
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
