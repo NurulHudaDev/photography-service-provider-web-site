@@ -9,7 +9,7 @@ const NotFound = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h1 className='text-center text-danger mt-5'>NotFound</h1>
+                        <h1 className='text-not-found text-center text-danger mt-5'>NotFound</h1>
                         <img src={notFound} alt="" />
                     </Col>
                 </Row>
