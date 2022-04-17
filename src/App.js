@@ -22,7 +22,11 @@ function App() {
             <ServiceDetail/>
           </RequireAuth>
         }></Route>
-        <Route path='/services' element={<Services/>}></Route>
+        <Route path='/services' element={
+          <RequireAuth>
+            <Services/>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
       </Routes>
