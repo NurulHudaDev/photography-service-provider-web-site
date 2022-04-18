@@ -8,6 +8,7 @@ import { auth } from "../../firebase.init";
 import "./SignUp.css";
 
 const SignUp = () => {
+    
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -18,7 +19,6 @@ const SignUp = () => {
         password: "",
         general: "",
     });
-
     const [showPass, setShowPass] = useState(false);
 
     const [createUserWithEmailAndPassword, user, loading, hookError] =
@@ -86,9 +86,11 @@ const SignUp = () => {
 
     useEffect(() => {
         if (user) {
-            navigate('/');
+            navigate(from);
         }
     }, [user]);
+    
+    
     
 
     return (

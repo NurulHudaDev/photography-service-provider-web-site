@@ -9,8 +9,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 const provider = new GoogleAuthProvider();
 
-const Login = () => {
 
+const Login = () => {
+    
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -83,7 +84,7 @@ const Login = () => {
        console.log(errorMessage);
       });
     }
-
+   
     return (
         <Container>
             <Row>
