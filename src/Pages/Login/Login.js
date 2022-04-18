@@ -35,8 +35,6 @@ const Login = () => {
             setErrors({...errors, email: "Invalid email"})
             setUserInfo({...userInfo, email: ""})
         }
-
-        // setEmail(e.target.value);
     }
 
     const heandelPasswordChang = (e) =>{
@@ -57,12 +55,6 @@ const Login = () => {
 
         signInWithEmail(userInfo.email, userInfo.password);
     }
-    
-    // useEffect(()=>{
-    //    if(hookError){
-    //         toast(hookError?.message)
-    //    }
-    // },[hookError])
 
     useEffect(() => {
         const error = hookError;
@@ -81,7 +73,6 @@ const Login = () => {
         }
     }, [hookError])
 
-    // --------------------------------
     const googleAuth = () =>{
         signInWithPopup(auth, provider)
       .then((result) => {
@@ -92,7 +83,6 @@ const Login = () => {
        console.log(errorMessage);
       });
     }
-    // --------------------------------------
 
     return (
         <Container>
@@ -111,7 +101,6 @@ const Login = () => {
                     <button className='button'>Log In</button>
                     <p className='mt-2'>New to Tech Geeks? <Link className="" to="/signup">Create New Account</Link></p>
                     <button className='google-button' onClick={googleAuth}>Continue with Google</button>
-
                     <ToastContainer/>
                 </form>
             </div>

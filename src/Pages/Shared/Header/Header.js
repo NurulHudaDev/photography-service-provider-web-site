@@ -41,7 +41,7 @@ const Header = () => {
                         {user?.uid?<Nav.Link onClick={hendelLogOut}>Log Out</Nav.Link>:<Nav.Link as={Link} to='/login'>Log In</Nav.Link>}
                     </Nav>
                 </Container>
-                <h4 className="logo">User: {user?.displayName}</h4>
+                <p className="logo">User: {user?.displayName}</p>
             </Navbar>
         </div>
     );

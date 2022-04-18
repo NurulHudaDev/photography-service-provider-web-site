@@ -35,8 +35,6 @@ const SignUp = () => {
             setErrors({ ...errors, email: "Invalid email" });
             setUserInfo({ ...userInfo, email: "" });
         }
-
-        // setEmail(e.target.value);
     };
     const heandelPasswordChang = (e) => {
         const passwordRegex = /.{6,}/;
@@ -88,9 +86,10 @@ const SignUp = () => {
 
     useEffect(() => {
         if (user) {
-            navigate(from);
+            navigate('/');
         }
     }, [user]);
+    
 
     return (
         <Container>
@@ -104,8 +103,9 @@ const SignUp = () => {
                     <input type="email" name="" id="" placeholder='Email' onChange={heandelEmailChang}/>
                     {errors?.email && <p className="text-danger">{errors.email}</p> }
                     <br />
-                    <input type="password" name="" id="" placeholder='Password' onChange={heandelPasswordChang}/>
+                    <input type={showPass ? "text" : "password"} name="" id="" placeholder='Password' onChange={heandelPasswordChang}/>
                     {errors?.password && <p className="text-danger">{errors.password}</p> }
+                    <p className="absolute top-3 right-5" onClick={() => setShowPass(!showPass)}>🔥</p>
                     <input type="password" name="" id="" placeholder='Confirm-Password' onChange={handleConfirmPasswordChange}/>
                     {errors?.password && <p className="text-danger">{errors.password}</p> }
                     <button className='button'>Sign Up</button>
